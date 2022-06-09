@@ -1,10 +1,10 @@
-STEPS
+# STEPS
 
-STEP1. 이산수학, 자료구조, 알고리즘
+STEP1. 1.이산수학, 2.자료구조, 3.알고리즘
 
-STEP2. 네트워크, 운영체제, 컴퓨터구조
+STEP2. 4. 네트워크, 5.운영체제, 6.컴퓨터구조
 
-STEP3. 오토마타, 형식언어, 컴파일러, 데이터베이스
+STEP3. 7.오토마타, 8.형식언어, 9.컴파일러, 10.데이터베이스
 
 
 
@@ -336,8 +336,6 @@ STEP3. 오토마타, 형식언어, 컴파일러, 데이터베이스
 
 
 
-
-
 ### 우선순위 큐(Priority Queue)(0503)
 
 - 여러 개의 항목 중에서 최소 또는 최댓값을 찾을 때 사용한다.
@@ -404,7 +402,7 @@ STEP3. 오토마타, 형식언어, 컴파일러, 데이터베이스
 - 힙이란? 몇 가지 특수한 속성을 가진 트리
 - **힙 속성 "노드의 값이 그 자식 노드의 값보다 작거나 같다. 또는 크거나 같다"**
 - 트리의 높이 h > 0일때 모든 노드들은 h 또는 h-1 레벨에 있어야 한다. (완전이진트리)
-- 즉, 힙은 완전 이진 트리여야 한다.
+- **즉, 힙은 완전 이진 트리여야 한다.**
 - 힙의 종류
   - **Min Heap (최소힙) : 노드의 값이 자식 노드의 값보다 작거나 같아야한다.**
   - **Max Heap (최대힙) : 노드의 값이 자식 노드의 값보다 크거나 같아야 한다.**
@@ -461,6 +459,22 @@ STEP3. 오토마타, 형식언어, 컴파일러, 데이터베이스
 
 
 
+### 다익스트라 알고리즘
+
+- 다익스트라 알고리즘은 BFS 알고리즘을 일반화한 것이다.
+- 보통의 BFS 알고리즘은 큐의 가장 앞에 있는 정점이 시작점 s와 weight를 고려한 제일 가까운 점이라는 것을 보장할 수 없기 때문에 weighted 그래프의 최단 경로 문제를 풀 수 없다.
+- 우선순위 큐를 사용한다.
+
+
+
+### MST(최소비용 신장 트리, Undirected, Weighted 그래프)
+
+- 어떤 그래프의 spanning tree는 모든 정점을 포함하고 있는 sub-graph 이면서 또한 tree이다. => 사이클이 없다.
+- 크림 Kream
+- 크루스칼 Kruskal
+
+
+
 
 
 # 알고리즘
@@ -492,7 +506,35 @@ STEP3. 오토마타, 형식언어, 컴파일러, 데이터베이스
 - Quick Sort
 - Insertion Sort
 
-### Greedy
+### Greedy(0516)
+
+- 그리디로 풀 수 있는 문제?
+- MST
+  - 부분 신장 그래프란 : 그래프가 가진 꼭짓점을 모두 포함하면서 그래프의 변으로 그려진 그래프
+  - 최소 신장 트리 : 그래프의 모든 꼭짓점을 노드로 포함하면서 노드 간의 비용을 최소로 하는 트리
+- KruskalMST(G)
+  - Input: a weighted graph
+  - Output: mininum spanning tree T
+  - 노드가 n개, 엣지가 m개인 그래프라면 엣지의 갯수 - 1 이 노드의 갯수 일 때 까지만 돌린다. 노드가 n 개일 때 최대 엣지 수는 n-1 개이기 때문!
+
+### 그리디 문제정리
+
+- Coin Change
+- MST
+- Shortest Path
+
+- Fractional Knapsack 
+
+- Set Covering 
+  - City Planning
+  - CCTV로 복도 커버하기
+  - 바이러스 커버하는 substring 찾기
+  - Subcontractor Selection to Build a Car
+  - Employment to Cover All Required Works with Minimim Number of Employee
+- Task Scheduling / Job Scheduling
+  - starting time-ending time
+  - task length
+  - 순서 : 1. earilest start time!! 으로 sorting()
 
 ### Dynamic Programming(0426)
 
