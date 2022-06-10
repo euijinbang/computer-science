@@ -20,6 +20,8 @@ CPU가 데이터를 요청했을 때 해당 메모리에서 데이터를 가져�
 
 "a file with a sequence of pairs of keys and pointers."
 
+자주 필터링하는 컬럼에 인덱스를 추가하여 데이터베이스 검색 속도를 향상시키는 방법.
+
 
 
 ### Role?
@@ -37,15 +39,9 @@ CPU가 데이터를 요청했을 때 해당 메모리에서 데이터를 가져�
 ### 인덱스가 필요 없는 경우
 
 - In case of small tables  -- 전체를 읽는게 더 빠르다.
+- massive data update or insert  -- 대규모 일괄 업데이트 작업이 자주 실행되는 경우에는 성능이 느려진다. Data Insertion 동안 계속해서 index가 재연산 되기 때문이다.(recalculation of index) (B트리가 계속 생성되기 때문이다.)  그래도 만들고 싶다면 data insertion 전에 인덱스를 제거하고, insert 후에 추가하라.
 
-- massive data update or insert -- 모든 퍼포먼스에 영향이 간다.
-
-  
-
-### 인덱스 생성시 유의사항
-
-- 더 이상 탐색하지 않을 경우 반드시 삭제하는게 좋다.
-- 레코드의 삽입과 삭제가 빈번히 일어나면 insert의 split 이나 delete 연산의 donate, merge 등이 발생하여 데이터베이스 성능을 크게 저하시킬 수 있다.
+- 즉, 더 이상 탐색하지 않을 경우 반드시 삭제하는게 좋다. 레코드의 삽입과 삭제가 빈번히 일어나면 인덱스 연산(insert의 split 이나 delete 연산의 donate, merge) 등이 발생하여 데이터베이스 성능을 크게 저하시킬 수 있다.
 
 
 
@@ -67,7 +63,7 @@ CPU가 데이터를 요청했을 때 해당 메모리에서 데이터를 가져�
 
 example 테이블의 ID 는 `primary key` 이기 때문에 이미 `B 트리`의 `키` 이기 때문에 빠른 속도로 탐색 가능하다.
 
-하지만 이름의 경우에는 모든 레코드에서 선형탐색 하니 `O(1)` 이나 걸린다.
+하지만 이름의 경우에는 모든 레코드에서 선형탐색 하니 `O(n)` 이나 걸린다.
 
 **이때, 'name'에 대해서 인덱스를 생성하면 `name`을 키로 B트리로 구성한다.**
 
@@ -91,3 +87,10 @@ where name like '이순신';
 
 
 
+
+
+### 참고자료
+
+- https://www.udemy.com/course/query-optimization-techniques-in-sql/learn/lecture/30863828#overview
+
+- 파이썬으로 배우는 자료 구조 핵심 원리
