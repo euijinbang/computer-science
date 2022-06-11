@@ -39,12 +39,16 @@ end. (Reservation)
 - `Commit` : 완료, 트랜잭션 확정
 - `Rollback` : 철회, 트랜잭션 취소
 
+
+
 ### Consistency : 동시성 제어, Concurrency control
 
 - 여러 사용자들이 다수의 트랜잭션을 동시에 실행시, 트랜잭션 간 간섭 없도록 한다.
 - `locking` 로킹 기법
   - 데이터 항목 갱신시 독점 로크
   - 데이터 항목 읽을 때 공유 로크 요청
+  
+  
 
 ### Durability : 회복, Recovery
 
@@ -55,3 +59,14 @@ end. (Reservation)
 
 - 고장 발생 전 트랜잭션 완료 명령 수행 => 트랜잭션의 갱신 사항 재수행 `REDO`
 - 고장 발생 전 트랜잭션 완료 명령 미수행 => 트랜잭션의 갱신 사항 취소 `UNDO`
+
+
+
+### 종료?
+
+***트랜잭션은 DDL이나 DCL의 경우 문장이 실행되고 난 후 자동으로 종료된다.***
+
+<u>***하지만, DML인 경우 반드시 COMMIT이나 ROLLBACK으로 종료해야 한다.***</u>
+
+ex.  ` INSERT, UPDATE, DELETE, MERGE` 
+
