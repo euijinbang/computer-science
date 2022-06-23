@@ -102,7 +102,7 @@
 
 
 
-
+#
 
 # 5. 응용 계층(세션계층 + 표현계층)
 
@@ -152,10 +152,14 @@ DNS 서버는 전 세계에 흩어져 있고, 서로 연계하여 동작한다.
 
 
 
+#
+
 # 총정리
 
 - 참고자료 : 모두의 네트워크
 
-![IMG_1](iamge.assets/network0.JPG)
+![network0](image.assets/network0.JPG)
 
-![IMG_1](image.assets/network1.JPG)
+
+
+![network1](image.assets/network1.JPG)
