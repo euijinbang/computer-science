@@ -159,6 +159,6 @@ DNS 서버는 전 세계에 흩어져 있고, 서로 연계하여 동작한다.
 
 
 
-![network0](0623_[network] 전송 계층, 응용 계층, 총정리.assets/network0.JPG)
+![network0](./0623_[network] 전송 계층, 응용 계층, 총정리.assets/network0.JPG)
 
-![network1](0623_[network] 전송 계층, 응용 계층, 총정리.assets/network1.JPG)
+![network1](./0623_[network] 전송 계층, 응용 계층, 총정리.assets/network1.JPG)
