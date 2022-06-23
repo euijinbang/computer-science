@@ -156,6 +156,10 @@ DNS 서버는 전 세계에 흩어져 있고, 서로 연계하여 동작한다.
 
 - 참고자료 : 모두의 네트워크
 
-![network](./network0.jpg)
 
-![network](./network1.jpg)
+
+
+
+![network0](0623_[network] 전송 계층, 응용 계층, 총정리.assets/network0.JPG)
+
+![network1](0623_[network] 전송 계층, 응용 계층, 총정리.assets/network1.JPG)
